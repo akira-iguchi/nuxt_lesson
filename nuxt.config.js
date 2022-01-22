@@ -42,6 +42,16 @@ export default {
   build: {
   },
 
+  // dir: {
+  //   pages: 'views' // Nuxt は pages/ フォルダの代わりに views/ を探します。
+  // },
+
+  router: {
+    base: '/app/',
+    // /users-idが/users/idになる
+    routeNameSplitter: '/'
+  },
+
   // このオブジェクトの値は $config を使ってクライアントとサーバー両方からアクセスできます（webページから見れる）。
   publicRuntimeConfig: {
     baseURL: process.env.BASE_URL
