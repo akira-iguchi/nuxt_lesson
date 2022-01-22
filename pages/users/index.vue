@@ -1,5 +1,5 @@
 <template>
-  <p>ssssssssssssssssssss</p>
+  <FetchState/>
 </template>
 
 <script>
