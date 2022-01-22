@@ -16,6 +16,19 @@ export default {
     ]
   },
 
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+
+      setTimeout(() => this.$nuxt.$loading.finish(), 500)
+    })
+  },
+
+  loading: {
+    color: 'blue',
+    height: '50px'
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/css/main.css'
@@ -38,5 +51,16 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  // このオブジェクトの値は $config を使ってクライアントとサーバー両方からアクセスできます（webページから見れる）。
+  publicRuntimeConfig: {
+    baseURL: process.env.BASE_URL
   }
+
+  // このオブジェクトの値は $config を使ってサーバーからのみアクセスできますwebページから見れない）。
+  // サーバー用の publicRuntimeConfig を上書きします。
+  // privateRuntimeConfig: {
+  //   apiSecret: process.env.API_SECRET
+  // }
 }
