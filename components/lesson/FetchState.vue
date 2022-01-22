@@ -16,6 +16,7 @@
         mountains: []
       }
     },
+    // fetchはページコンポーネントでもコンポーネントでも使える（asyncDataはページコンポーネントのみ）
     async fetch() {
       this.mountains = await fetch(
         'https://api.nuxtjs.dev/mountains'

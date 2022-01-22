@@ -12,6 +12,8 @@
     <p>Our Url is: {{ $config.baseURL}}</p>
 
     <img src="~/assets/images/your_image.png" />
+
+    <!-- <p>{{ post.description }}</p> -->
   </div>
 </template>
 
@@ -19,5 +21,11 @@
 export default {
   name: 'UserPage',
   layout: 'blog',
+
+  // // asyncData は pages でのみ使用可能
+  // async asyncData({ params, $http }) {
+  //   const post = await $http.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
+  //   return { post }
+  // }
 }
 </script>
