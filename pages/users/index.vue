@@ -17,6 +17,7 @@
 
 <script>
 export default {
-  name: 'UserPage'
+  name: 'UserPage',
+  layout: 'blog',
 }
 </script>
