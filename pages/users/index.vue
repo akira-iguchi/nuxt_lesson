@@ -1,5 +1,8 @@
 <template>
   <div class="lesson">
+    <!-- ページ移動時に発生 -->
+    <Loading/>
+
     <!-- コンポーネント名はそれ自信のパスディレクトリとファイル名をベースにします。 -->
     <LessonFetchState/>
 

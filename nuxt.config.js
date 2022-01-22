@@ -16,18 +16,7 @@ export default {
     ]
   },
 
-  mounted() {
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start()
-
-      setTimeout(() => this.$nuxt.$loading.finish(), 500)
-    })
-  },
-
-  loading: {
-    color: 'blue',
-    height: '50px'
-  },
+  loading: '~/components/loading.vue',
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
