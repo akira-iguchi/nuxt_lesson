@@ -3,6 +3,9 @@
     <!-- ページ移動時に発生 -->
     <Loading/>
 
+    <!-- ユーザーのインターネット接続があるかどうかをすばやく確認(isOnline, isOffline) -->
+    <div v-if="$nuxt.isOnline">You are offline</div>
+
     <!-- コンポーネント名はそれ自信のパスディレクトリとファイル名をベースにします。 -->
     <LessonFetchState/>
 
@@ -21,6 +24,7 @@
 export default {
   name: 'UserPage',
   layout: 'blog',
+  scrollToTop: true,
 
   // // asyncData は pages でのみ使用可能
   // async asyncData({ params, $http }) {
