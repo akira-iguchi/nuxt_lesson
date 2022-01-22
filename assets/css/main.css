@@ -1,0 +1,8 @@
+body {
+  background-color: bisque;
+}
+
+.lesson {
+  /* css最初にスラッシュ要らない */
+  background: url("~assets/images/bukkomi.jpg");
+}
